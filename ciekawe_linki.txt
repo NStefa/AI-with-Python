@@ -1,0 +1,8 @@
+# Test Turinga
+https://turingtest.live/
+
+# Mnożenie macierzy
+https://www.youtube.com/watch?v=kqWCwwyeE6k
+
+# Pandas in Python
+https://www.youtube.com/watch?v=j00KgxRSeng
