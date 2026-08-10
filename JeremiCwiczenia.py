@@ -1,3 +1,4 @@
+'''
 def oblicz_bmi(waga_kg, wzrost_m):
     bmi = waga_kg / (wzrost_m ** 2)
     if bmi <18.5:
@@ -87,3 +88,75 @@ def wypisz_kontakty(ksiazka):
 
         print("\nWszystkie kontakty:")
         wypisz_kontakty(ksiazka)
+
+
+
+
+'''
+#=====================================================================================================
+# zad 1
+import pandas as pd
+import numpy as np
+
+przepisy = pd.read_csv("recipes.csv")
+
+liczbaW = len(przepisy)
+liczbaK = len(przepisy.columns)
+print(liczbaK, liczbaW)
+
+print(przepisy.head())
+
+#print(przepisy.dtypes)
+
+
+# zad 2
+#ile jest róznych platform zamieniam na ile jiest różnych kategorii przepisów w mojej bazie
+ileKategorii = przepisy['RecipeCategory'].nunique()
+print("Ilosc kategorii: ", ileKategorii)
+
+
+
+#zamiast gatunki, to jakie  kategorie występują w zbiorze
+kategorie = przepisy['RecipeCategory'].unique()
+print(kategorie)
+
+
+#Które platformy mają najwięcej gier? -> Które kategorie mają najwięcej przepisów?
+rankingKategorii = przepisy['RecipeCategory'].value_counts()
+print(rankingKategorii.head(10))
+
+
+#Jaka jest średnia i maksymalna sprzedaż globalna? -> średnia i maksymalna wartość dla kalorii
+srednia = przepisy['Calories'].mean()
+maksymalna = przepisy['Calories'].max()
+print('srednia: ',srednia, 'maksymalna: ', maksymalna)
+
+
+
+
+#zad 3
+braki = przepisy.isna().sum()
+print("braki: ", braki)  #cos dziwnego, chyba wczesniej wypisuje jak robię ctrl + F
+
+
+najwiecej = braki.idxmax()
+print("Najwiecej brakow ma: ", najwiecej)
+
+
+
+kalorieNumpy = przepisy['Calories'].to_numpy()
+
+sumaNp = np.nansum(kalorieNumpy)
+sredniaNp = np.nanmean(kalorieNumpy) #nan bo jeśli jest nuill to wywali błąd
+
+print("Suma kalorii (NumPy):", sumaNp)
+print("Średnia kalorii (NumPy):", sredniaNp)
+
+
+
+
+
+kalorie1000 = przepisy['Calories'] * 1000
+
+print("\n Kalorie 1000:")
+print(kalorie1000.head())
