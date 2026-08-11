@@ -130,7 +130,7 @@ typyNadwozia = cars['body_type_type'].unique()
 print(f"typy nadwozia: {typyNadwozia}")
 
 topMarki = cars['mark'].value_counts()
-print(f"Marki z najwieksza liczbą aut: {topMarki}")
+print(f"Marki z najwieksza liczbą aut: {topMarki.head(10)}")
 
 sredniaCena = cars['price'].mean()
 print(f"Srednia cena: {sredniaCena}")
