@@ -1,3 +1,5 @@
+'''
+
 def oblicz_bmi(waga_kg, wzrost_m):
     BMI = waga_kg/(wzrost_m**2)
     if waga_kg > 0 and wzrost_m > 0:
@@ -103,3 +105,53 @@ wypisz_kontakty(ksiazka)
 usun_numer(ksiazka, "Bartek", '123-456-789')
 print("------PO ZMIANIE------")
 wypisz_kontakty(ksiazka)
+
+'''
+
+# lekcja 2 Zadania
+import pandas as pd
+import numpy as np
+
+cars = pd.read_csv("dataset.csv")
+
+wiersze = cars.shape[0]
+kolumny = cars.shape[1]
+
+print(f"liczba wierszy: {wiersze} \nliczba kolumn:{kolumny}")
+
+print(cars.head())
+print(cars.info())
+print(cars.dtypes)
+
+ileMarek = cars['mark'].nunique()
+print(f"liczba marek: {ileMarek}")
+
+typyNadwozia = cars['body_type_type'].unique()
+print(f"typy nadwozia: {typyNadwozia}")
+
+topMarki = cars['mark'].value_counts()
+print(f"Marki z najwieksza liczbą aut: {topMarki}")
+
+sredniaCena = cars['price'].mean()
+print(f"Srednia cena: {sredniaCena}")
+
+maxCena = cars['price'].max()
+print(f"Maksymalna cena: {maxCena}")
+
+
+brakiWKolumnach = cars.isna().sum()
+print(f"braki w kolumnach: {brakiWKolumnach}")
+
+najwiecejBrakow = brakiWKolumnach.idxmax()
+print(f"Kolumna z najwieksza liczbą braków: {najwiecejBrakow}")
+
+cenaNumPy = cars['price'].to_numpy()
+
+sumaCen = np.sum(cenaNumPy)
+sredniaCenaNumPy = np.mean(cenaNumPy)
+
+print(f" Suma cen numpy: {sumaCen}")
+print(f" Srednia cena numpy: {sredniaCenaNumPy:.2f}")
+
+cena1000 = cars['price'] * 1000
+print(f"5 wynikow po mnozeniu razy 1000:\n{cena1000.head()}")
