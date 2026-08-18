@@ -9,3 +9,6 @@ https://www.youtube.com/watch?v=j00KgxRSeng
 
 # Regresja liniowa
 https://www.youtube.com/watch?v=3dhcmeOTZ_Q
+
+# Google Teachable Machine - klasyfikacja obrazów
+https://teachablemachine.withgoogle.com/
