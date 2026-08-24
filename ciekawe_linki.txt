@@ -12,3 +12,9 @@ https://www.youtube.com/watch?v=3dhcmeOTZ_Q
 
 # Google Teachable Machine - klasyfikacja obrazów
 https://teachablemachine.withgoogle.com/
+
+# Hiperparametry
+https://www.youtube.com/watch?v=lfiw2Rh2v8k
+
+# Prosta klasyfikacja obrazów - SVC() (od wczytania zdjęć do zapisania modelu)
+https://www.youtube.com/watch?v=il8dMDlXrIE
