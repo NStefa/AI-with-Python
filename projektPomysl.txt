@@ -1,0 +1,10 @@
+	Autonomiczny łazik (np. marsjański) (Przejedzie czy utknie?)
+
+
+Łazik skanuje teren przed sobą i musi podjąć decyzję, czy wjeżdża na dany fragment powierzchni.
+
+Problem: Czy dany kawałek terenu jest bezpieczny do przejazdu? (Tak - jedź / Nie - omiń)
+
+Dane (cechy): Kąt nachylenia terenu, wielkość największego kamienia na drodze, sypkość piasku (wymyślona skala 1-10).
+
+Wizualizacja: Podobnie jak z traktorkiem – możesz wygenerować mapę (siatkę 10x10), gdzie Twój model koloruje na zielono pola, po których łazik może jechać, a na czerwono te, których ma unikać.
