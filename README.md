@@ -2,6 +2,11 @@
 
 Repozytorium zawiera materiały przygotowane jako podstawy metod sztucznej inteligencji.
 
+## PROJEKT AI
+Osobne repozytorium dla projektu gry 2D z wykorzystaniem PyGame.
+
+link: https://github.com/NStefa/AI-firefighting-drone
+
 ---
 ## Pobieranie repozytorium
 
